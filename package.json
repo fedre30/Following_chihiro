@@ -1,0 +1,23 @@
+{
+  "name": "following_chihiro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedre30/Following_chihiro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedre30/Following_chihiro/issues"
+  },
+  "homepage": "https://github.com/fedre30/Following_chihiro#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0",
+    "parcel": "^1.8.1"
+  }
+}
