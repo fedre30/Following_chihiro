@@ -1,6 +1,6 @@
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
-//import acceptNode from '../nodes/1-';
+import acceptNode from '../nodes/1-monster';
 import refuseNode from '../nodes/2-monster';
 
 const text1 = '[Nom choisi] va aux bains publiques pour commencer à préparer des bains aux herbes avec la seule plaquette que le patron lui a donné.\n' +
