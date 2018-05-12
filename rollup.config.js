@@ -4,7 +4,7 @@ import url from "rollup-plugin-url";
 export default {
   input: 'src/js/app.js',
   output: {
-    file: 'dist/app.generated.js',
+    file: 'public/app.generated.js',
     format: 'umd'
   },
   plugins: [
