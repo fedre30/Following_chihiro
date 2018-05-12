@@ -9,5 +9,5 @@ const text1 = "Oh non! Haku est en danger! \n" +
 
 
 export default function () {
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)});
+  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }

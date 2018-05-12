@@ -16,7 +16,7 @@ function selectedChoice2() {
 }
 
 function text1Finish () {
-  DialogManager.showDialog('Yubaba', text2, text2Finish);
+  DialogManager.showDialog('Yubaba:', text2, text2Finish);
 }
 
 function text2Finish() {
@@ -27,5 +27,5 @@ function text2Finish() {
 }
 
 export default function (){
-  DialogManager.showDialog('Yubaba', text1, text1Finish);
+  DialogManager.showDialog('Yubaba:', text1, text1Finish);
 }

@@ -22,5 +22,5 @@ function text1Finish() {
 }
 
 export default function (){
-  DialogManager.showDialog('Yubaba', text1, text1Finish);
+  DialogManager.showDialog('Yubaba:', text1, text1Finish);
 }

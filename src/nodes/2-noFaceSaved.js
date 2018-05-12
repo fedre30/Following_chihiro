@@ -8,6 +8,7 @@ const text1 = 'Tout le monde est en fête car [nom choisi] a guéri Sans-Visage.
     'sigille et lui demander de l\'aide pour soigner les blessures de Haku.';
 
 
+
 function selectedChoice1() {
     State.switchToState(withSansVisage);
 }
@@ -23,3 +24,4 @@ export default function text1Finish() {
         { text: 'Allez voir Zeniba sans Sans-Visage', cb: selectedChoice2 },
     ]);
 }
+

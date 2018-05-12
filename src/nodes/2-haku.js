@@ -13,6 +13,6 @@ function finishText1(){
 
 
 export default function () {
-  DialogManager.showDialog('Haku', text1, finishText1);
+  DialogManager.showDialog('Haku:', text1, finishText1);
 }
 

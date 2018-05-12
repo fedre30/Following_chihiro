@@ -10,7 +10,7 @@ const text3 = "[nom choisi] sort et voit avec surprise que Haku est venu la cher
 
 
 function finishText1(){
-  DialogManager.showDialog('Zeniba', text2, finishText2)
+  DialogManager.showDialog('Zeniba:', text2, finishText2)
 }
 
 function finishText2(){
