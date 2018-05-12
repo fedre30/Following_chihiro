@@ -1,6 +1,8 @@
+import background from '../assets/2-yubaba.jpg';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
-import nextNode from '../nodes/2-revelation';
+import nextNode from '../nodes/2-name';
 
 const text1 = "Bonjour, Yubaba-san. Je suis venue pour vous demander un travail.";
 
@@ -26,5 +28,6 @@ function finishText3(){
 
 
 export default function () {
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('Chihiro:', text1, finishText1);
 }
