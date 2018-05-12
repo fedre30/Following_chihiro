@@ -10,4 +10,4 @@ class StateManager{
 
 const instance = new StateManager();
 
-return instance;
+export default instance;
