@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "rollup -cw",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/fedre30/Following_chihiro#readme",
   "dependencies": {},
   "devDependencies": {
+    "rollup": "^0.58.2",
     "rollup-plugin-sass": "^0.6.1",
+    "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-url": "^1.4.0"
   }
 }

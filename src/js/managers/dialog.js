@@ -21,14 +21,12 @@ class DialogManager {
         for (let i = 0; i < choices.length; i++) {
             const choice = choices[i];
             const choiceItem = document.createElement('div');
-            choiceItem.classList.add('choiceItem');
+            choiceItem.classList.add('choices-item');
             choiceItem.innerText = choice.text;
             this.choicesEl.appendChild(choiceItem);
-            this.choicesEl.addEventListener('click', ()=> {
-                choice.cb;
+            choiceItem.addEventListener('click', ()=> {
+                choice.cb();
                 this.clearChoices();
-                /*this.clearText();
-                this.clearAuthor();*/
             })
         }
     }
@@ -39,13 +37,10 @@ class DialogManager {
         }
     }
 
-    /*clearText(){
+    clearText(){
+        this.authorEl.innerText = '';
         this.textEl.innerText = '';
     }
-
-    clearAuthor(){
-        this.authorEl.innerText = '';
-    }*/
 }
 
 const instance = new DialogManager();
