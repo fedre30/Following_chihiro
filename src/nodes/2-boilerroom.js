@@ -9,10 +9,10 @@ const text2= "Désolée, petite. Je n'ai besoin de personne pour preparer mes su
   "Va la voir, elle te donnera ce que tu cherches!";
 
 function finishText1(){
-  DialogManager.showDialog('Kamaji:', text2, ()=> {State.switchToState(nextNode)}, true)
+  DialogManager.showDialog('Kamaji :', text2, ()=> {State.switchToState(nextNode)}, true)
 }
 
 
 export default function () {
-  DialogManager.showDialog('Chihiro:', text1, finishText1);
+  DialogManager.showDialog('Chihiro :', text1, finishText1);
 }

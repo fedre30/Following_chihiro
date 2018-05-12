@@ -10,9 +10,9 @@ const text2= "J'ai entendu que tes parents se sont transformés en cochons. Tu v
 
 
 function finishText1(){
-    DialogManager.showDialog('Haku', text2, ()=> {State.switchToState(nextNode)},true )
+    DialogManager.showDialog('Haku : ', text2, ()=> {State.switchToState(nextNode)},true )
 }
 
 export default function () {
-    DialogManager.showDialog('Haku', text1, finishText1);
+    DialogManager.showDialog('Haku : ', text1, finishText1);
 }

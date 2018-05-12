@@ -9,7 +9,7 @@ const text2= "C'est tard, ma puce. Tu devrais rentrer avec ton ami si tu ne veux
 
 
 function finishText1(){
-    DialogManager.showDialog('Chihiro', text2, ()=> {State.switchToState(nextNode)} )
+    DialogManager.showDialog('Chihiro :', text2, ()=> {State.switchToState(nextNode)} )
 }
 
 export default function () {
