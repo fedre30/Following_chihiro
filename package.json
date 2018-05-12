@@ -17,8 +17,9 @@
     "url": "https://github.com/fedre30/Following_chihiro/issues"
   },
   "homepage": "https://github.com/fedre30/Following_chihiro#readme",
-  "dependencies": {
-    "node-sass": "^4.9.0",
-    "parcel": "^1.8.1"
+  "dependencies": {},
+  "devDependencies": {
+    "rollup-plugin-sass": "^0.6.1",
+    "rollup-plugin-url": "^1.4.0"
   }
 }
