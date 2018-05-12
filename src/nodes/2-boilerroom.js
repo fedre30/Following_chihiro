@@ -1,5 +1,6 @@
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
+import nextNode from '../nodes/2-yubaba';
 
 const text1 = "Bonjour,  Kamaji-san. Je suis venue pour vous demander de travailler ici.";
 
