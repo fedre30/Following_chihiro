@@ -6,5 +6,5 @@ const text1 = "Un gros esprit putride arrive et demande de se faire laver. Grâc
 
 
 export default function () {
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)});
+  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }

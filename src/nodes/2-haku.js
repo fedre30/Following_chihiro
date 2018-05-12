@@ -8,11 +8,11 @@ const text2 = 'Mmm.. je vois que tu es humaine. Si tu ne veux pas disparaître, 
   'Viens, je t\'accompagne à la chaufferie pour rencontrer Kamaji.\n';
 
 function finishText1(){
-  DialogManager.showDialog('Haku', text2, ()=> {State.switchToState(nextNode)} )
+  DialogManager.showDialog('', text2, ()=> {State.switchToState(nextNode)}, true)
 }
 
 
 export default function () {
-  DialogManager.showDialog('Haku', text1, finishText1);
+  DialogManager.showDialog('Haku:', text1, finishText1);
 }
 

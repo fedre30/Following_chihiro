@@ -7,5 +7,5 @@ const text1 = "Tout le monde est en fête car [nom choisi] a guéri Sans-Visage.
 
 
 export default function () {
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)});
+  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }

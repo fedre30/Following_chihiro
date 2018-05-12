@@ -8,5 +8,5 @@ const text1 = "[nom choisi] va chercher Yubaba pour la prevenir que Haku a été
 
 
 export default function () {
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)});
+  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }
