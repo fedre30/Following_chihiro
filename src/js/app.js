@@ -1,6 +1,6 @@
 import style from '../style/main.sass';
 import './player';
-import test from '../nodes/1-spirit';
+import test from '../nodes/2-haku';
 
 
 const styleEl = document.createElement('style');
