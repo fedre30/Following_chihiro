@@ -9,13 +9,26 @@ class DialogManager {
     hide() {
         this.dialogEl.style.display = "none";
         this.clearChoices();
-        this.clearText()
+        this.clearText();
     }
+
 
     showDialog(speaker, text, cb) {
         this.authorEl.innerText = speaker;
-        this.textEl.innerText = text;
-        setTimeout(cb, 3000);
+        //this.textEl.innerText = text;
+        let index = 1;
+
+        const animateText = () => {
+            if(index > text.length){
+                cb();
+            }
+            this.textEl.innerText = text.substring(0,index);
+            index++;
+
+            setTimeout(animateText, 20 + Math.random() * 40);
+        };
+
+        setTimeout(animateText, 50);
     }
 
     showChoices(choices) {
@@ -43,6 +56,7 @@ class DialogManager {
         this.authorEl.innerText = '';
         this.textEl.innerText = '';
     }
+
 }
 
 const instance = new DialogManager();
