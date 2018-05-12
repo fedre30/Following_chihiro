@@ -29,14 +29,14 @@ class DialogManager {
                         {text: "Suivant", cb: cb}
                     ]);
                 } else {
-                    setTimeout(cb, 2000);
+                    setTimeout(cb, 10);
                 }
                 return;
             }
             this.textEl.innerText = text.substring(0,index);
             index++;
 
-            setTimeout(animateText, 20 + Math.random() * 40);
+            setTimeout(animateText, 1 /*+ Math.random() * 40*/);
         };
 
         setTimeout(animateText, 50);

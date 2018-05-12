@@ -14,7 +14,7 @@ function finishText1(){
 }
 
 function finishText2(){
-  DialogManager.showDialog('', text3, ()=> {State.switchToState(nextNode)} )
+  DialogManager.showDialog('', text3, ()=> {State.switchToState(nextNode)}, true)
 }
 
 
