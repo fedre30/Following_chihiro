@@ -5,12 +5,12 @@ html
   font-size: 62.5%
 
 body
-  font-family: Gotham, sans-serif
+  font-family: 'Noto Sans', sans-serif
 
 .mainContent
   height: 100vh
   position: relative
-  background-color: $lightblue
+
 
 
 .song
@@ -35,26 +35,29 @@ body
   height: 100vh
   position: absolute
   background-size: cover
-  opacity: 0.5
+
 
 .dialog-container
-  position: fixed
-  bottom: 20vh
+  position: absolute
+  bottom: 10vh
   left: 5vw
   width: 90%
+  background-color: rgba(77, 104, 135, 0.7)
+  padding: 2rem
+
 
   .dialog
     font-size: 3rem
     font-weight: 400
     height: 50px
     color: white
-    margin-bottom: 5vh
+    margin-bottom: 10vh
     &-author
-      font-weight: 400
+      font-weight: 700
       color: $yellow
       font-size: 3.6rem
     &-text
-      line-height: 3.7rem
+      line-height: 4rem
 
   .choices
     display: flex
@@ -64,12 +67,12 @@ body
     height: 40px
     &-item
       color: white
+      font-weight: 600
       font-size: 2rem
       cursor: pointer
-      border: 1px solid $darkblue
       border-radius: 5px
       padding: 10px
-      background-color: $darkblue
+      background-color: $lightblue
     &-item:hover
       background: white
       color: $darkgrey

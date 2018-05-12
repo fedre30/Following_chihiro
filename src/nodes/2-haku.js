@@ -2,7 +2,7 @@ import background from '../assets/2-haku.jpg';
 import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
-import nextNode from '../nodes/2-revelation';
+import nextNode from '../nodes/2-boilerroom';
 
 
 const text1 = 'Salut! Je suis Haku, l\'apprenti de la sorcière Yubaba. Bienvenue dans le monde des esprits! Mais attends, j\'ai l\'impression de t\'avoir déjà rencontrée...';

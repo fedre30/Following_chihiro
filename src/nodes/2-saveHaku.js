@@ -1,4 +1,4 @@
-import background from '../assets/2-saveHaku.gif';
+import background from '../assets/2-saveHaku.png';
 import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
