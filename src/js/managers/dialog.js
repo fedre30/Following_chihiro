@@ -4,6 +4,7 @@ class DialogManager {
         this.authorEl = document.querySelector(".dialog-author");
         this.textEl = document.querySelector(".dialog-text");
         this.choicesEl = document.querySelector(".choices");
+        this.content = document.querySelector(".content");
         this.name = 'Chihiro';
 
     }
@@ -67,6 +68,7 @@ class DialogManager {
         this.authorEl.innerText = '';
         this.textEl.innerText = '';
     }
+
 
     setName(value){
        this.name = value;

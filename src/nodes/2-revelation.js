@@ -3,7 +3,7 @@ import State from '../js/managers/state';
 import nextNode from '../nodes/0-noFace_baths';
 
 const text1 = "Je suis content que tu as signé le contrat, [nom choisi]. C'est comme ça que tu t'appelles maintenant, n'est-ce pas?\n" +
-  "J'ai une mauvaise nouvelle. Tes parents ont mangé la nourriture du marché et ils ont été transformés en cochons!.";
+  "J'ai une mauvaise nouvelle. Tes parents ont mangé la nourriture du marché et ils ont été transformés en cochons!";
 
 const text2= "Oh non! Comment les sauver?";
 
