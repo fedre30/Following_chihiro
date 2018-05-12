@@ -8,6 +8,8 @@ class DialogManager {
 
     hide() {
         this.dialogEl.style.display = "none";
+        this.clearChoices();
+        this.clearText()
     }
 
     showDialog(speaker, text, cb) {

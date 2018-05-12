@@ -1,6 +1,7 @@
 import DialogManager from '../js/managers/dialog';
 
-const text1 = 'Bonjour, pourriez-vous m\'aider? Mes parents se sont transformés en cochons!';
+const text1 = 'Bonjour, pourriez-vous m\'aider? Mes parents se sont transformés en cochons!\n' +
+    '\n' ;
 
 function selectedChoice1() {
     alert('selected 1');
