@@ -4,6 +4,8 @@ class DialogManager {
         this.authorEl = document.querySelector(".dialog-author");
         this.textEl = document.querySelector(".dialog-text");
         this.choicesEl = document.querySelector(".choices");
+        this.name = 'Chihiro';
+
     }
 
     hide() {
@@ -13,14 +15,23 @@ class DialogManager {
     }
 
 
-    showDialog(speaker, text, cb) {
+    showDialog(speaker, text, cb, withNextButton) {
         this.authorEl.innerText = speaker;
         //this.textEl.innerText = text;
         let index = 1;
 
+        withNextButton = withNextButton || false;
+
         const animateText = () => {
             if(index > text.length){
-                cb();
+                if (withNextButton) {
+                    this.showChoices([
+                        {text: "Suivant", cb: cb}
+                    ]);
+                } else {
+                    setTimeout(cb, 2000);
+                }
+                return;
             }
             this.textEl.innerText = text.substring(0,index);
             index++;
@@ -57,6 +68,10 @@ class DialogManager {
         this.textEl.innerText = '';
     }
 
+    setName(value){
+       this.name = value;
+
+    }
 }
 
 const instance = new DialogManager();
