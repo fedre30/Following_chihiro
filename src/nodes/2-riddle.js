@@ -5,7 +5,7 @@ import State from '../js/managers/state';
 import goodAnswer from '../nodes/2-goodAnswer';
 import wrongAnswer from '../nodes/0-stayWithHaku';
 
-const text1 = 'Bonjour, [nom choisi]. Je vois que tu te débrouilles pas mal dans ce monde.Je vais te donner une chance: si tu veux que tes parents redeviennent humains, alors répond bien à cette devinette:';
+const text1 = 'Bonjour, {{name}}. Je vois que tu te débrouilles pas mal dans ce monde.Je vais te donner une chance: si tu veux que tes parents redeviennent humains, alors répond bien à cette devinette:';
 
 const text2 = 'Combien têtes d\'Ariel, sensei Hokage, as-tu vu dans tous les images?';
 

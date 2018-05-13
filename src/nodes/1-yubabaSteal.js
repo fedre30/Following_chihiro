@@ -3,7 +3,7 @@ import State from '../js/managers/state';
 import withSansVisage from '../nodes/1-zeniba';
 import withoutSansVisage from '../nodes/2-zeniba';
 
-const text1 = 'Oh non! Yubaba a vu la boullette amère et l\'a volé de la main de [nom choisi]!';
+const text1 = 'Oh non! Yubaba a vu la boullette amère et l\'a volé de la main de {{name}}!';
 
 const text2 = 'C\'était un médicament pour libérer des esprits! Il pouvait sauver tes parents!\n' +
     'Ne t\'inquiète pas, je vais essayer de la reprendre. Va chercher Zeniba, donne lui ce sigille en tant ' +
