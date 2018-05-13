@@ -1,4 +1,4 @@
-import background from '../assets/0-intro.jpg';
+import background from '../assets/0-intro2.png';
 import BackgroundManager from '../js/managers/background';
 import sound from '../../public/assets/music/cejour.mp3';
 import SoundMangager from '../js/managers/sound';
