@@ -1,7 +1,9 @@
 import background from '../assets/0-intro.jpg';
+import BackgroundManager from '../js/managers/background';
+import sound from '../../public/assets/music/cejour.mp3';
+import SoundMangager from '../js/managers/sound';
 import video from '../assets/spirited_away_intro.mov';
 import VideoManager from '../js/managers/video'
-import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import acceptNode from '../nodes/1-parentsTransformation';
@@ -19,6 +21,7 @@ function selectedChoice2() {
 }
 function skip() {
     VideoManager.clearVideo();
+    SoundMangager.activeSound(sound);
     displayInfo();
 }
 

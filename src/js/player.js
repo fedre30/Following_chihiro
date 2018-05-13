@@ -9,7 +9,6 @@ volumeImg.src = volumeUp;
 function setVolume(value) {
   setMuted(false);
   player.volume = Math.max(Math.min(value, 1), 0);
-
 }
 
 
