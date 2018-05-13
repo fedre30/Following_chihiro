@@ -1,4 +1,4 @@
-import background from '../assets/2-yubaba.jpg';
+import background from '../assets/2-yubaba.png';
 import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';

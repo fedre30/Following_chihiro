@@ -1,3 +1,5 @@
+import background from '../assets/0-intro1.jpg';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import video from "./0-intro";
@@ -14,5 +16,6 @@ function startStory () {
 }
 
 export default function (){
+    BackgroundManager.setBackground(background);
     DialogManager.showDialog('', '', startStory);
 }

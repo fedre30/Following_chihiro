@@ -1,3 +1,5 @@
+import background from '../assets/1-zeniba.png';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/1-playBaby';
@@ -13,5 +15,6 @@ function finishText1(){
 }
 
 export default function () {
+    BackgroundManager.setBackground(background);
     DialogManager.showDialog('', text1, finishText1);
 }

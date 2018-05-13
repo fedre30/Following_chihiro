@@ -4,7 +4,6 @@ class SoundManager{
     }
 
     activeSound(videoEl){
-        console.log('k')
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.content.appendChild(source);
