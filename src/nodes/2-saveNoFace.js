@@ -1,3 +1,5 @@
+import background from '../assets/2-saveNoFace.png';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from './2-noFaceSaved';
@@ -8,5 +10,6 @@ const text1 = "[nom choisi] va chercher Yubaba pour la prevenir que Haku a été
 
 
 export default function () {
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }

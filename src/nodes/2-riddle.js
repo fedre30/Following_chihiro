@@ -1,3 +1,5 @@
+import background from '../assets/2-riddle.png';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import goodAnswer from '../nodes/2-goodAnswer';
@@ -27,5 +29,6 @@ function text2Finish() {
 }
 
 export default function (){
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('Yubaba :', text1, text1Finish);
 }

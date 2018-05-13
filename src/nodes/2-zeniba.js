@@ -1,3 +1,5 @@
+import background from '../assets/2-Zeniba.jpg';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-riddle';
@@ -17,5 +19,6 @@ function finishText2(){
 }
 
 export default function () {
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('', text1, finishText1);
 }

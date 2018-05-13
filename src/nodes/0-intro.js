@@ -17,6 +17,10 @@ function selectedChoice1() {
 function selectedChoice2() {
   State.switchToState(refuseNode);
 }
+function skip() {
+    VideoManager.clearVideo();
+    displayInfo();
+}
 
 function text1Finish () {
   DialogManager.showChoices([
@@ -24,11 +28,13 @@ function text1Finish () {
     { text: 'Ne pas suivre ses parents', cb: selectedChoice2 },
   ]);
 }
-export function test() {
+export function displayInfo() {
+    VideoManager.clearVideo();
     BackgroundManager.setBackground(background);
     DialogManager.showDialog('', text1, text1Finish);
 }
 
 export default function (){
   VideoManager.showVideo(video);
+  DialogManager.showDialog('', '', skip,true);
 }

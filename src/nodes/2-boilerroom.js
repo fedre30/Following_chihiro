@@ -1,3 +1,5 @@
+import background from '../assets/2-boilerroom.jpg';
+import BackgroundManager from '../js/managers/background';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-yubaba';
@@ -14,5 +16,6 @@ function finishText1(){
 
 
 export default function () {
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('Chihiro :', text1, finishText1);
 }

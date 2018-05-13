@@ -5,6 +5,7 @@ class BackgroundManager{
 
   setBackground(url){
     this.content.style.backgroundImage = `url(${url})`;
+    this.content.style.backgroundSize = 'cover';
   }
 }
 
