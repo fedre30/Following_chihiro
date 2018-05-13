@@ -1,6 +1,6 @@
 import background from '../assets/2-saveNoFace.png';
 import BackgroundManager from '../js/managers/background';
-import song from '../../public/assets/music/noFace.mp3';
+import song from '../../public/assets/music/dramatic.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
