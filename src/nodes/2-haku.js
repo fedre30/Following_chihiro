@@ -1,4 +1,5 @@
-import background from '../assets/2-haku.jpg';
+import background from '../assets/1-yubabaSteal.jpg';
+import background2 from '../assets/2-haku.jpg'
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/haku.mp3'
 import SoundManager from '../js/managers/sound';
@@ -12,7 +13,7 @@ const text2 = 'Mmm.. je vois que tu es humaine. Si tu ne veux pas disparaître, 
   'Viens, je t\'accompagne à la chaufferie pour rencontrer Kamaji.\n';
 
 function finishText1(){
-
+  BackgroundManager.setBackground(background2);
   DialogManager.showDialog('Haku : ', text2, ()=> {State.switchToState(nextNode)}, true)
 
 }

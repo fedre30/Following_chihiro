@@ -1,5 +1,7 @@
 import background from '../assets/2-boilerroom.jpg';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/kamaji.mp3';
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-yubaba';
@@ -16,6 +18,8 @@ function finishText1(){
 
 
 export default function () {
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Chihiro :', text1, finishText1);
 }

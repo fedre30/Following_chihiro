@@ -4,10 +4,20 @@ import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-revelation';
 
-const text1 = "Choissisez votre nom ";
-
+const text1 = "Choisissez votre nom : ";
 
 export default function () {
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
+
+  let inputEl;
+
+  DialogManager.showDialog('', text1, ()=> {
+    DialogManager.name = inputEl.value;
+
+    State.switchToState(nextNode);
+  } , true, () => {
+    inputEl = DialogManager.displayInput();
+    inputEl.value = DialogManager.htmlEntities(DialogManager.name);
+    inputEl.focus();
+  });
 }
