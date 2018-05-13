@@ -29,6 +29,7 @@ function text2Finish() {
 }
 
 export default function (){
+
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Yubaba :', text1, text1Finish);
 }

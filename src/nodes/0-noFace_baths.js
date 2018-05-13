@@ -1,5 +1,7 @@
 import background from '../assets/0-noFace_baths.jpg';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/noFace.mp3';
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import acceptNode from '../nodes/1-monster';
@@ -24,6 +26,8 @@ function text1Finish () {
 }
 
 export default function (){
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('', text1, text1Finish);
 }

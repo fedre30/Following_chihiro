@@ -1,5 +1,7 @@
 import background from '../assets/2-monster.jpg';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/monster.mp3';
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-saveHaku';
@@ -8,6 +10,8 @@ const text1 = "Un gros esprit putride arrive et demande de se faire laver. Grâc
 
 
 export default function () {
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }

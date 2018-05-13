@@ -1,5 +1,7 @@
 import background from '../assets/2-noFaceSaved.gif';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/cheers.mp3';
+import SoundManager from '../js/managers/sound';
 import State from "../js/managers/state";
 import withSansVisage from "./1-zeniba";
 import withoutSansVisage from "./2-zeniba";
@@ -26,6 +28,8 @@ function text1Finish(){
 }
 
 export default function () {
+    SoundManager.clearSound();
+    SoundManager.activeSound(song);
     BackgroundManager.setBackground(background);
     DialogManager.showDialog('', text1, text1Finish);
 

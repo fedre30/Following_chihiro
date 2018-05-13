@@ -1,5 +1,7 @@
 import background from '../assets/2-saveNoFace.png';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/noFace.mp3';
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from './2-noFaceSaved';
@@ -10,6 +12,8 @@ const text1 = "{{name}} va chercher Yubaba pour la prevenir que Haku a été ble
 
 
 export default function () {
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
 }
