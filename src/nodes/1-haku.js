@@ -12,7 +12,11 @@ const text2= "J'ai entendu que tes parents se sont transformés en cochons. Tu v
 
 
 function finishText1(){
+<<<<<<< HEAD
+    DialogManager.showDialog(`${DialogManager.name} :`, text2, ()=> {State.switchToState(nextNode)},true )
+=======
     DialogManager.showDialog('Haku', text2, ()=> {State.switchToState(nextNode)},true )
+>>>>>>> 67a79200bc44361647bae9fd46f5767d35dd5e56
 }
 
 export default function () {

@@ -1,30 +1,34 @@
 class DialogManager {
     constructor() {
-        this.dialogEl = document.querySelector(".dialog-container");
+        this.dialogContainer = document.querySelector(".dialog-container");
+        this.dialogEl = document.querySelector(".dialog");
         this.authorEl = document.querySelector(".dialog-author");
         this.textEl = document.querySelector(".dialog-text");
         this.choicesEl = document.querySelector(".choices");
         this.content = document.querySelector(".content");
         this.nameChoice = document.querySelector(".nameChoice");
+        this._name = "Chihiro";
     }
 
     hide() {
-        this.dialogEl.style.display = "none";
+        this.dialogContainer.style.display = "none";
         this.clearChoices();
         this.clearText();
     }
 
 
-    showDialog(speaker, text, cb, withNextButton) {
+    showDialog(speaker, text, cb, withNextButton, animCb) {
         this.authorEl.innerText = speaker;
-        this.textEl.innerText = text;
         let index = 1;
 
         withNextButton = withNextButton || false;
 
+        text = text.replace('{{name}}', this.name);
+
         const animateText = () => {
             if(index > text.length){
                 if (withNextButton) {
+                    if (typeof animCb !== 'undefined' && animCb !== null) animCb();
                     this.showChoices([
                         {text: "Suivant", cb: cb}
                     ]);
@@ -36,7 +40,7 @@ class DialogManager {
             this.textEl.innerText = text.substring(0,index);
             index++;
 
-            setTimeout(animateText, 1 /*+ Math.random() * 40*/);
+            setTimeout(animateText, 1 + Math.random() * 2);
         };
 
         setTimeout(animateText, 50);
@@ -68,13 +72,19 @@ class DialogManager {
         this.textEl.innerText = '';
     }
 
-    setName(){
-        let name = this.nameChoice.value;
-        if(name){
-            this.name = name;
-        }
-        this.nameChoice.style.display = "none";
-        return name;
+    displayInput(){
+        const input = document.createElement('input');
+        input.classList.add('nameChoice');
+        this.textEl.appendChild(input);
+        return input;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(newName){
+        this._name = newName;
     }
 }
 

@@ -5,8 +5,8 @@ import withSansVisage from "./1-zeniba";
 import withoutSansVisage from "./2-zeniba";
 import DialogManager from "../js/managers/dialog";
 
-const text1 = 'Tout le monde est en fête car [nom choisi] a guéri Sans-Visage.\n' +
-    'Néanmoins, [nom choisi] veut aller voir la sorcière Zeniba pour lui rendre le ' +
+const text1 = 'Tout le monde est en fête car {{name}} a guéri Sans-Visage.\n' +
+    'Néanmoins, {{name}} veut aller voir la sorcière Zeniba pour lui rendre le ' +
     'sigille et lui demander de l\'aide pour soigner les blessures de Haku.';
 
 
