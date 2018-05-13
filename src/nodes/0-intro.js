@@ -33,6 +33,7 @@ function text1Finish () {
 }
 export function displayInfo() {
     VideoManager.clearVideo();
+    SoundMangager.activeSound(sound);
     BackgroundManager.setBackground(background);
     DialogManager.showDialog('', text1, text1Finish);
 }
