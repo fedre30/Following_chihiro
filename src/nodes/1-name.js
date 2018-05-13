@@ -6,7 +6,6 @@ import nextNode from '../nodes/1-haku';
 
 const text1 = "Choisissez votre nom : ";
 
-
 export default function () {
     BackgroundManager.setBackground(background);
 
@@ -18,7 +17,7 @@ export default function () {
         State.switchToState(nextNode);
     } , true, () => {
         inputEl = DialogManager.displayInput();
-        inputEl.value = DialogManager.name;
+        inputEl.value = DialogManager.htmlEntities(DialogManager.name);
         inputEl.focus();
     });
 }

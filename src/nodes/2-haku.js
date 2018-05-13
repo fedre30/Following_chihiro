@@ -22,6 +22,6 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Haku :', text1, finishText1);
+  DialogManager.showDialog('Haku : ', text1, finishText1);
 }
 

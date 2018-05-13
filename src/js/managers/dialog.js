@@ -16,6 +16,9 @@ class DialogManager {
         this.clearText();
     }
 
+    htmlEntities(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
 
     showDialog(speaker, text, cb, withNextButton, animCb) {
         this.authorEl.innerText = speaker;
@@ -23,7 +26,7 @@ class DialogManager {
 
         withNextButton = withNextButton || false;
 
-        text = text.replace('{{name}}', this.name);
+        text = text.replace(new RegExp('{{name}}', 'gi'), this.name);
 
         const animateText = () => {
             if(index > text.length){
