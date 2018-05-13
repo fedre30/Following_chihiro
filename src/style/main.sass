@@ -24,12 +24,14 @@ body
   justify-content: flex-end
   padding: 5px
 
-  .volume-slider
-    display: flex
-    .volume-img
-      width: 35px
-      img
-        width: 100%
+.volume
+  display: none
+.volume-slider
+  display: flex
+  .volume-img
+    width: 35px
+    img
+      width: 100%
 
 .content
   width: 100vw
@@ -52,6 +54,8 @@ body
 
 
   .dialog
+    display: flex
+    align-items: center
     font-size: 3rem
     font-weight: 400
     height: 50px
@@ -61,8 +65,19 @@ body
       font-weight: 700
       color: $yellow
       font-size: 3.6rem
+
     &-text
+      display: flex
+      align-items: center
       line-height: 4rem
+    .nameChoice
+      border-radius: 2px
+      margin: 4px 10px 0
+      padding: 10px
+      height: 25px
+      width: 10%
+      border: none
+      outline: none
 
   .choices
     display: flex
