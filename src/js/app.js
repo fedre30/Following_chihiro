@@ -1,7 +1,7 @@
 import style from '../style/main.sass';
 import './player';
 
-import start from '../nodes/0-intro';
+import start from '../nodes/postIntro';
 
 
 

@@ -1,6 +1,6 @@
 class BackgroundManager{
   constructor(){
-    this.content = document.querySelector('.content');
+    this.content = document.querySelector('.mainContent');
   }
 
   setBackground(url){
