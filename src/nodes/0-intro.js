@@ -1,7 +1,7 @@
 import background from '../assets/0-intro2.png';
 import BackgroundManager from '../js/managers/background';
 import sound from '../../public/assets/music/cejour.mp3';
-import SoundMangager from '../js/managers/sound';
+import SoundManager from '../js/managers/sound';
 import video from '../assets/spirited_away_intro.mov';
 import VideoManager from '../js/managers/video'
 import DialogManager from '../js/managers/dialog';
@@ -18,10 +18,11 @@ function selectedChoice1() {
 
 function selectedChoice2() {
   State.switchToState(refuseNode);
+
 }
 function skip() {
     VideoManager.clearVideo();
-    SoundMangager.activeSound(sound);
+    SoundManager.activeSound(sound);
     displayInfo();
 }
 
@@ -33,7 +34,7 @@ function text1Finish () {
 }
 export function displayInfo() {
     VideoManager.clearVideo();
-    SoundMangager.activeSound(sound);
+    SoundManager.activeSound(sound);
     BackgroundManager.setBackground(background);
     DialogManager.showDialog('', text1, text1Finish);
 }

@@ -4,10 +4,14 @@ class SoundManager{
     }
 
     activeSound(videoEl){
-        const source = document.createElement('source');
-        source.setAttribute('src',videoEl);
-        this.content.appendChild(source);
+        this.content.setAttribute('src',videoEl);
     }
+
+    clearSound(){
+       this.content.removeAttribute('src');
+
+    }
+
 }
 
 const instance = new SoundManager();

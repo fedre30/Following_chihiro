@@ -1,5 +1,7 @@
 import background from '../assets/2-haku.jpg';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/haku.mp3'
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-boilerroom';
@@ -11,10 +13,13 @@ const text2 = 'Mmm.. je vois que tu es humaine. Si tu ne veux pas disparaître, 
 
 function finishText1(){
   DialogManager.showDialog('Haku', text2, ()=> {State.switchToState(nextNode)}, true)
+
 }
 
 
 export default function () {
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Haku :', text1, finishText1);
 }
