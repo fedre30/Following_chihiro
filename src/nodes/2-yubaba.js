@@ -16,11 +16,11 @@ const text4 = "Mmm.. Haku, hein? Bon, je vais te donner une chance, mais à la p
   "En revanche, tu ne pourras pas utiliser ton prénom. Choisis le prénom qui te convient le plus"
 
 function finishText1(){
-  DialogManager.showDialog('Yubaba :', text2, finishText2)
+  DialogManager.showDialog('Yubaba :', text2, finishText2,true)
 }
 
 function finishText2(){
-  DialogManager.showDialog('Chihiro :', text3, finishText3)
+  DialogManager.showDialog('Chihiro :', text3, finishText3,true)
 }
 
 function finishText3(){
@@ -33,5 +33,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1);
+  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
 }

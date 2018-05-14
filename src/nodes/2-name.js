@@ -17,7 +17,7 @@ export default function () {
     State.switchToState(nextNode);
   } , true, () => {
     inputEl = DialogManager.displayInput();
-    inputEl.value = DialogManager.htmlEntities(DialogManager.name);
+    inputEl.value = DialogManager.name;
     inputEl.focus();
   });
 }

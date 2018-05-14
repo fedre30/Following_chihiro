@@ -21,5 +21,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, finishText1);
+  DialogManager.showDialog('', text1, finishText1,true);
 }

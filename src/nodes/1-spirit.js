@@ -15,14 +15,12 @@ const text2 = 'Bonjour, petite. Bienvenue dans le monde des esprits!Je vois que 
   'les bains publiques.';
 
 function finishText1() {
-  DialogManager.showDialog('Sans-Visage :', text2, () => {
-    State.switchToState(nextNode)
-  }, true);
+  DialogManager.showDialog('Sans-Visage :', text2, () => {State.switchToState(nextNode)}, true);
 }
 
 export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1);
+  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
 }

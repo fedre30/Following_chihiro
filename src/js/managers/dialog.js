@@ -16,17 +16,15 @@ class DialogManager {
         this.clearText();
     }
 
-    htmlEntities(str) {
-        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
 
     showDialog(speaker, text, cb, withNextButton, animCb) {
+        text = text.replace(new RegExp('{{name}}', 'gi'), this.name);
+        speaker = speaker.replace(new RegExp('{{name}}', 'gi'), this.name);
+
         this.authorEl.innerText = speaker;
         let index = 1;
 
         withNextButton = withNextButton || false;
-
-        text = text.replace(new RegExp('{{name}}', 'gi'), this.name);
 
         const animateText = () => {
             if(index > text.length){
@@ -36,14 +34,14 @@ class DialogManager {
                         {text: "Suivant", cb: cb}
                     ]);
                 } else {
-                    setTimeout(cb, 1000);
+                    setTimeout(cb, 10);
                 }
                 return;
             }
             this.textEl.innerText = text.substring(0,index);
             index++;
 
-            setTimeout(animateText, 20 + Math.random() * 40);
+            setTimeout(animateText, 2 + Math.random() * 4);
         };
 
         setTimeout(animateText, 50);
@@ -78,6 +76,7 @@ class DialogManager {
     displayInput(){
         const input = document.createElement('input');
         input.classList.add('nameChoice');
+        input.setAttribute('maxlength','15');
         this.textEl.appendChild(input);
         return input;
     }
