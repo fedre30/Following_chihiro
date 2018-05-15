@@ -1,5 +1,7 @@
 import background from '../assets/2-riddle.png';
 import BackgroundManager from '../js/managers/background';
+import song from '../../public/assets/music/hardWork.mp3';
+import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import goodAnswer from '../nodes/2-goodAnswer';
@@ -29,7 +31,8 @@ function text2Finish() {
 }
 
 export default function (){
-
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Yubaba :', text1, text1Finish,true);
 }
