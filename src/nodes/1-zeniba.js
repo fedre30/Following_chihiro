@@ -11,15 +11,14 @@ const text1 = "{{name}} rend le sigille à Zeniba et passe un bon moment avec el
 const text2 = "C'est tard, ma puce. Tu devrais rentrer avec ton ami si tu ne veux pas rater ton train.";
 
 
+
 function finishText1() {
-  DialogManager.showDialog('Chihiro :', text2, () => {
-    State.switchToState(nextNode)
-  })
+  DialogManager.showDialog('Zeniba :', text2, () => {State.switchToState(nextNode)},true)
 }
 
 export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, finishText1,true);
+  DialogManager.showDialog('', text1, finishText1 , true);
 }

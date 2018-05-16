@@ -23,16 +23,19 @@ function selectedChoice2() {
 }
 
 function text1Finish() {
-  DialogManager.showDialog('', text2);
-  DialogManager.showChoices([
-    {text: 'Allez voir Zeniba avec Sans-Visage', cb: selectedChoice1},
-    {text: 'Allez voir Zeniba sans Sans-Visage', cb: selectedChoice2},
-  ]);
+  DialogManager.showDialog('', text2, text2Finish);
+
+}
+function text2Finish() {
+    DialogManager.showChoices([
+        {text: 'Allez voir Zeniba avec Sans-Visage', cb: selectedChoice1},
+        {text: 'Allez voir Zeniba sans Sans-Visage', cb: selectedChoice2},
+    ]);
 }
 
 export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, text1Finish);
+  DialogManager.showDialog('', text1, text1Finish,true);
 }
