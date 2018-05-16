@@ -16,5 +16,8 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, ()=> {State.switchToState(nextNode)}, true);
+  DialogManager.showDialog('', text1, ()=> {
+    State.switchToState(nextNode);
+    VideoManager.clearVideo();
+  }, true);
 }
