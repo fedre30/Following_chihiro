@@ -41,7 +41,7 @@ class DialogManager {
             this.textEl.innerText = text.substring(0,index);
             index++;
 
-            setTimeout(animateText, 20 + Math.random() * 40);
+            setTimeout(animateText, 2 + Math.random() * 4);
         };
 
         setTimeout(animateText, 50);

@@ -4,7 +4,7 @@ import {displayInfo} from '../../nodes/0-intro';
 class VideoManager{
     constructor(){
         this.dialogEl = document.querySelector('.dialog-container');
-       this.content = document.querySelector('.video');
+        this.content = document.querySelector('.video');
     }
 
     showVideo(videoEl){
@@ -14,6 +14,12 @@ class VideoManager{
         this.content.onended = function () {
             displayInfo();
         } ;
+    }
+
+    showBgVideo(videoEl){
+        const source = document.createElement('source');
+        source.setAttribute('src',videoEl);
+        this.content.appendChild(source);
     }
 
     clearVideo(){
