@@ -1,4 +1,4 @@
-import background from '../assets/2-monster.jpg';
+import background from '../assets/monster.mov';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/monster.mp3';
 import SoundManager from '../js/managers/sound';
