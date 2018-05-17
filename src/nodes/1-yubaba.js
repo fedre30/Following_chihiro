@@ -35,8 +35,10 @@ function finishText3() {
 
 
 export default function () {
-  VideoManager.showVideo(video);
+  BackgroundManager.clearBackground();
   SoundManager.clearSound();
+  VideoManager.setVideo();
+  VideoManager.showVideo(video);
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Chihiro :', text1, finishText1,true);
