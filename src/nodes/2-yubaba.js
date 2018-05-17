@@ -15,15 +15,15 @@ const text3 = "S'il vous plaît, madame. Je ne sais plus où se trouvent mes par
 const text4 = "Mmm.. Haku, hein? Bon, je vais te donner une chance, mais à la première erreur, je vais résilier le contrat.\n" +
   "En revanche, tu ne pourras pas utiliser ton prénom. Choisis le prénom qui te convient le plus"
 
-function finishText1(){
-  DialogManager.showDialog('Yubaba :', text2, finishText2,true)
+function text1finish(){
+  DialogManager.showDialog('Yubaba :', text2, text2finish,true)
 }
 
-function finishText2(){
-  DialogManager.showDialog('Chihiro :', text3, finishText3,true)
+function text2finish(){
+  DialogManager.showDialog('Chihiro :', text3, text3finish,true)
 }
 
-function finishText3(){
+function text3finish(){
   DialogManager.showDialog('Yubaba :', text4, ()=> {State.switchToState(nextNode)}, true)
 }
 
@@ -33,5 +33,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
+  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
 }

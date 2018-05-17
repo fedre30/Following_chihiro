@@ -14,7 +14,7 @@ const text2 = "{{name}} va devant Sans-visage et lui offre le reste du médicame
      "Sans-visage commence à expulser tout ce qu\'il a ingurgité et reprend sa forme normale";
 
 
-function finishText1() {
+function text1finish() {
     DialogManager.showDialog('', text2, ()=> {State.switchToState(nextNode)} ,true)
 }
 
@@ -22,5 +22,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1 ,finishText1 , true);
+  DialogManager.showDialog('', text1 ,text1finish , true);
 }

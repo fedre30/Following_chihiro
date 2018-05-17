@@ -14,7 +14,7 @@ const text1 = "Oh non! Haku est en danger! \n" +
 const text2 = "Haku vomit le sigille et reprend sa forme humaine. Chihiro le laisse reposer et va chercher Yubaba";
 
 
-function finishText1() {
+function text1finish() {
   BackgroundManager.setBackground(background2);
   DialogManager.showDialog('', text2, () => {State.switchToState(nextNode)}, true)
 }
@@ -22,5 +22,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, finishText1, true);
+  DialogManager.showDialog('', text1, text1finish, true);
 }

@@ -14,7 +14,7 @@ const text2 = 'Bonjour, petite. Bienvenue dans le monde des esprits!Je vois que 
   'disparaître, tu dois aller chercher du travail. Je sais que Yubaba cherche une jeune fille pour travailler dans ' +
   'les bains publiques.';
 
-function finishText1() {
+function text1finish (){
   DialogManager.showDialog('Sans-Visage :', text2, () => {State.switchToState(nextNode)}, true);
 }
 
@@ -22,5 +22,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
+  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
 }

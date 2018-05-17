@@ -1,3 +1,7 @@
+import BackgroundManager from "./background";
+import VideoManager from "./video";
+import SoundManager from "./sound";
+
 class DialogManager {
     constructor() {
         this.dialogContainer = document.querySelector(".dialog-container");
@@ -71,6 +75,12 @@ class DialogManager {
     clearText(){
         this.authorEl.innerText = '';
         this.textEl.innerText = '';
+    }
+    displayInfo(speaker,text,sound,background,cb) {
+        VideoManager.clearVideo();
+        SoundManager.activeSound(sound);
+        BackgroundManager.setBackground(background);
+        this.showDialog(speaker, text, cb);
     }
 
     displayInput(){

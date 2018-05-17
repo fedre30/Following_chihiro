@@ -14,7 +14,7 @@ function selectedChoice2() {
   State.switchToState(haku);
 }
 
-function text1Finish() {
+function text1finish() {
   DialogManager.showChoices([
     { text: 'Rentrer avec ses parents', cb: selectedChoice1 },
     { text: 'Rester dans le monde des esprits avec Haku', cb: selectedChoice2 },
@@ -22,5 +22,5 @@ function text1Finish() {
 }
 
 export default function (){
-  DialogManager.showDialog('Yubaba :', text1, text1Finish);
+  DialogManager.showDialog('Yubaba :', text1, text1finish);
 }

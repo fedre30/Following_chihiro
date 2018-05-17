@@ -9,6 +9,7 @@ import State from '../js/managers/state';
 import acceptNode from '../nodes/1-parentsTransformation';
 import refuseNode from '../nodes/2-haku';
 
+
 const text1 = 'Chihiro et ses parents arrivent dans le monde des esprits. Ses parents vont vers le marché mais Chihiro ' +
     'sent que quelque chose de mal va se passer...';
 
@@ -22,26 +23,19 @@ function selectedChoice2() {
 }
 function skip() {
     VideoManager.clearVideo();
-    SoundManager.activeSound(sound);
-    displayInfo();
+    DialogManager.displayInfo('',text1,sound,background,text1finish);
 }
 
-function text1Finish () {
+function text1finish () {
   DialogManager.showChoices([
     { text: 'Suivre ses parents', cb: selectedChoice1 },
     { text: 'Ne pas suivre ses parents', cb: selectedChoice2 },
   ]);
 }
-export function displayInfo() {
-    VideoManager.clearVideo();
-    SoundManager.activeSound(sound);
-    BackgroundManager.setBackground(background);
-    DialogManager.showDialog('', text1, text1Finish);
-}
 
 export default function (){
-BackgroundManager.clearBackground();
-VideoManager.setVideo();
-VideoManager.showVideo(video);
-DialogManager.showDialog('', '', skip,true);
+    BackgroundManager.clearBackground();
+    VideoManager.setVideo();
+    VideoManager.showVideo(video);
+    DialogManager.showDialog('', '', skip,true);
 }

@@ -12,11 +12,11 @@ const text2= " Oh je sens quelque chose dehors. Va regader, petite";
 
 const text3 = "{{name}} sort et voit avec surprise que Haku est venu la chercher sous forme de dragon.";
 
-function finishText1(){
-  DialogManager.showDialog('Zeniba :', text2, finishText2,true)
+function text1finish(){
+  DialogManager.showDialog('Zeniba :', text2, text2finish,true)
 }
 
-function finishText2(){
+function text2finish(){
   DialogManager.showDialog('', text3, ()=> {State.switchToState(nextNode)}, true)
 }
 
@@ -24,5 +24,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, finishText1,true);
+  DialogManager.showDialog('', text1, text1finish,true);
 }
