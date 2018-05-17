@@ -6,20 +6,20 @@ class VideoManager{
         this.dialogEl = document.querySelector('.dialog-container');
         this.content = document.querySelector('.video');
     }
-
     showVideo(videoEl){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.content.appendChild(source);
         this.content.onended = function () {
             displayInfo();
-        } ;
+        };
     }
 
     showBgVideo(videoEl){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.content.appendChild(source);
+        this.content.setAttribute('loop','true')
     }
 
     clearVideo(){

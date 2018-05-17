@@ -40,6 +40,7 @@ export function displayInfo() {
 }
 
 export default function (){
-  VideoManager.showVideo(video);
-  DialogManager.showDialog('', '', skip,true);
+BackgroundManager.clearBackground();
+VideoManager.showVideo(video);
+DialogManager.showDialog('', '', skip,true);
 }
