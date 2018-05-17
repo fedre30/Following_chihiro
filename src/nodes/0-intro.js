@@ -3,7 +3,7 @@ import BackgroundManager from '../js/managers/background';
 import sound from '../../public/assets/music/cejour.mp3';
 import SoundManager from '../js/managers/sound';
 import video from '../assets/spirited_away_intro.mov';
-import VideoManager from '../js/managers/video'
+import VideoManager from '../js/managers/video';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import acceptNode from '../nodes/1-parentsTransformation';
@@ -40,6 +40,8 @@ export function displayInfo() {
 }
 
 export default function (){
-  VideoManager.showVideo(video);
-  DialogManager.showDialog('', '', skip,true);
+BackgroundManager.clearBackground();
+VideoManager.setVideo();
+VideoManager.showVideo(video);
+DialogManager.showDialog('', '', skip,true);
 }

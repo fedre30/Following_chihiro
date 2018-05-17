@@ -4,27 +4,36 @@ import {displayInfo} from '../../nodes/0-intro';
 class VideoManager{
     constructor(){
         this.dialogEl = document.querySelector('.dialog-container');
-        this.content = document.querySelector('.video');
+        this.content = document.querySelector('.mainContent');
+    }
+    setVideo(){
+       const video = document.createElement('video');
+       video.classList.add('video');
+       video.setAttribute('autoPlay','true');
+       this.content.appendChild(video);
+
+       this.video = video;
     }
 
-    showVideo(videoEl){
+    showVideo(videoEl, loop = false){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
-        this.content.appendChild(source);
-        this.content.onended = function () {
+        this.video.appendChild(source);
+        this.video.onended = function () {
             displayInfo();
-        } ;
+        };
     }
 
     showBgVideo(videoEl){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.content.appendChild(source);
+        this.content.setAttribute('loop','true')
     }
 
     clearVideo(){
         this.dialogEl.style.background = "rgba(77, 104, 135, 0.7)";
-        this.content.remove();
+        this.video.remove();
     }
 }
 

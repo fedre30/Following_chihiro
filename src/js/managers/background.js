@@ -7,6 +7,10 @@ class BackgroundManager{
     this.content.style.backgroundImage = `url(${url})`;
     this.content.style.backgroundSize = 'cover';
   }
+
+  clearBackground(){
+    this.content.style.backgroundImage = '';
+  }
 }
 
 const instance = new BackgroundManager();
