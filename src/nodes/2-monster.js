@@ -17,8 +17,10 @@ export default function () {
   SoundManager.activeSound(sound);
   VideoManager.setVideo();
   VideoManager.showBgVideo(video);
-  DialogManager.showDialog('',text1,()=> { State.switchToState(nextNode);
+  DialogManager.showDialog('',text1,()=> {
   VideoManager.clearVideo();
+  State.switchToState(nextNode);
+
   }, true);
 
 }
