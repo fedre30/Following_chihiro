@@ -1,11 +1,13 @@
 import BackgroundManager from '../js/managers/background';
-import song from '../../public/assets/music/haku.mp3';
+import sound from '../../public/assets/music/haku.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
+import video from '../assets/haku_human.mov';
 import nextNode from '../nodes/2-saveNoFace';
 import video from '../assets/haku_human.mov';
 import VideoManager from "../js/managers/video";
+
 
 
 const text1 = "Oh non! Haku est en danger! \n" +
@@ -16,15 +18,15 @@ const text2 = "Haku vomit le sigille et reprend sa forme humaine. Chihiro le lai
 
 
 function text1finish() {
-  DialogManager.showDialog('', text2, () => {State.switchToState(nextNode)}, true)
+  DialogManager.showDialog('', text2, () => {
+
+      VideoManager.clearVideo();
+    State.switchToState(nextNode)}, true)
 }
 export default function () {
   BackgroundManager.clearBackground();
-  SoundManager.clearSound();
-  SoundManager.activeSound(song);
+  SoundManager.activeSound(sound);
   VideoManager.setVideo();
   VideoManager.showBgVideo(video);
-  BackgroundManager.setBackground(video);
-  DialogManager.showDialog('', text1, () => {VideoManager.clearVideo()}, text1finish, true)
-
+  DialogManager.showDialog('', text1, text1finish, true);
 }
