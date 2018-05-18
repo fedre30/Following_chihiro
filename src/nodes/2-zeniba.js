@@ -1,4 +1,4 @@
-import background from '../assets/2-Zeniba.jpg';
+import background from '../assets/2-Zeniba.png';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/zeniba.mp3';
 import SoundManager from '../js/managers/sound';

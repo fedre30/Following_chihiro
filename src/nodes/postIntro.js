@@ -1,4 +1,4 @@
-import background from '../assets/0-intro1.jpg';
+import background from '../assets/0-intro1.png';
 import BackgroundManager from '../js/managers/background';
 import VideoManager from '../js/managers/video';
 import DialogManager from '../js/managers/dialog';

@@ -1,4 +1,4 @@
-import background from '../assets/0-noFace_baths.jpg';
+import background from '../assets/0-noFace_baths.png';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/noFace.mp3';
 import SoundManager from '../js/managers/sound';
