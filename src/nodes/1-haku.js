@@ -1,4 +1,4 @@
-import background from '../assets/2-haku.jpg';
+import background from '../assets/2-haku.png';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/haku.mp3';
 import SoundManager from '../js/managers/sound';

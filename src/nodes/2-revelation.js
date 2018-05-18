@@ -1,4 +1,4 @@
-import background from '../assets/2-revelation.jpg';
+import background from '../assets/2-revelation.png';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/revelation.mp3';
 import SoundManager from '../js/managers/sound';
