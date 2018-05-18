@@ -1,5 +1,4 @@
 import BackgroundManager from '../js/managers/background';
-import background from '../assets/2-monster.jpg'
 import sound from '../../public/assets/music/monster.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
@@ -13,16 +12,13 @@ const text1 = "Un gros esprit putride arrive et demande de se faire laver. Grâc
 
 
 
-function skip() {
-    VideoManager.clearVideo();
-    DialogManager.displayInfo('',text1,sound,background,()=> { State.switchToState(nextNode)}, true);
-}
-
 export default function () {
   BackgroundManager.clearBackground();
-  SoundManager.clearSound();
+  SoundManager.activeSound(sound);
   VideoManager.setVideo();
   VideoManager.showBgVideo(video);
-  DialogManager.showDialog('', '', skip,true);
+  DialogManager.showDialog('',text1,()=> { State.switchToState(nextNode);
+  VideoManager.clearVideo();
+  }, true);
 
 }
