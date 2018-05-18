@@ -76,11 +76,11 @@ class DialogManager {
         this.authorEl.innerText = '';
         this.textEl.innerText = '';
     }
-    displayInfo(speaker,text,sound,background,cb) {
+    displayInfo(speaker,text,sound,background,cb,withNextButton) {
         VideoManager.clearVideo();
         SoundManager.activeSound(sound);
         BackgroundManager.setBackground(background);
-        this.showDialog(speaker, text, cb);
+        this.showDialog(speaker, text, cb,withNextButton);
     }
 
     displayInput(){
