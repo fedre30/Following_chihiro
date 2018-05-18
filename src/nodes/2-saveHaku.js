@@ -5,6 +5,7 @@ import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-saveNoFace';
 import video from '../assets/haku_human.mov';
+import VideoManager from "../js/managers/video";
 
 
 const text1 = "Oh non! Haku est en danger! \n" +
@@ -18,8 +19,12 @@ function text1finish() {
   DialogManager.showDialog('', text2, () => {State.switchToState(nextNode)}, true)
 }
 export default function () {
+  BackgroundManager.clearBackground();
   SoundManager.clearSound();
   SoundManager.activeSound(song);
+  VideoManager.setVideo();
+  VideoManager.showBgVideo(video);
   BackgroundManager.setBackground(video);
-  DialogManager.showDialog('', text1, text1finish, true);
+  DialogManager.showDialog('', text1, () => {VideoManager.clearVideo()}, text1finish, true)
+
 }
