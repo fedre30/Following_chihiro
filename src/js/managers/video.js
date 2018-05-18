@@ -1,3 +1,5 @@
+import DialogManager from '../../js/managers/dialog';
+
 class VideoManager{
     constructor(){
         this.dialogEl = document.querySelector('.dialog-container');
@@ -18,15 +20,18 @@ class VideoManager{
         source.setAttribute('src',videoEl);
         this.video.appendChild(source);
         this.video.onended = function () {
-            displayInfo();
+        DialogManager.displayInfo();
         };
     }
 
     showBgVideo(videoEl){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
-        this.content.appendChild(source);
-        this.content.setAttribute('loop','true')
+        this.video.setAttribute('loop','true');
+        this.video.appendChild(source);
+        this.video.onended = function () {
+            DialogManager.displayInfo();
+        };
     }
 
     clearVideo(){
