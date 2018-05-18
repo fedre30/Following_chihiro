@@ -1,18 +1,16 @@
-import {displayInfo} from '../../nodes/0-intro';
-
-
 class VideoManager{
     constructor(){
         this.dialogEl = document.querySelector('.dialog-container');
         this.content = document.querySelector('.mainContent');
     }
     setVideo(){
-       const video = document.createElement('video');
-       video.classList.add('video');
-       video.setAttribute('autoPlay','true');
-       this.content.appendChild(video);
+        this.dialogEl.style.background = '';
+        const video = document.createElement('video');
+        video.classList.add('video');
+        video.setAttribute('autoPlay','true');
+        this.content.appendChild(video);
 
-       this.video = video;
+        this.video = video;
     }
 
     showVideo(videoEl, loop = false){

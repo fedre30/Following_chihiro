@@ -9,7 +9,7 @@ const text1 = 'Salut, je suis le bébé de Yubaba. J\'ai ton médicament. Si tu 
     'Es-tu prête? Allons-y!' ;
 
 
-export default function finishText1() {
+export default function (){
     BackgroundManager.setBackground(background);
     DialogManager.showDialog('Bébé :', text1, ()=> {State.switchToState(nextNode)}, true);
 }

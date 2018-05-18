@@ -12,7 +12,7 @@ const text1 = 'Salut! Je suis Haku, l\'apprenti de la sorcière Yubaba. Bienvenu
 const text2 = 'Mmm.. je vois que tu es humaine. Si tu ne veux pas disparaître, tu dois aller chercher du travail.\n' +
   'Viens, je t\'accompagne à la chaufferie pour rencontrer Kamaji.\n';
 
-function finishText1(){
+function text1finish(){
   BackgroundManager.setBackground(background2);
   DialogManager.showDialog('Haku : ', text2, ()=> {State.switchToState(nextNode)}, true)
 
@@ -23,6 +23,6 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Haku : ', text1, finishText1,true);
+  DialogManager.showDialog('Haku : ', text1, text1finish,true);
 }
 

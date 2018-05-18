@@ -15,15 +15,15 @@ const text3 = "Si tu travailles dur, Yubaba pourra peut-être t'aider à les ret
 
 const text4 = " D'accord, c'est ce que je vais faire!";
 
-function finishText1(){
-  DialogManager.showDialog('{{name}} :', text2, finishText2,true)
+function text1finish(){
+  DialogManager.showDialog('{{name}} :', text2, text2finish,true)
 }
 
-function finishText2(){
-  DialogManager.showDialog('Haku :', text3, finishText3,true)
+function text2finish(){
+  DialogManager.showDialog('Haku :', text3, text3finish,true)
 }
 
-function finishText3(){
+function text3finish(){
   DialogManager.showDialog('{{name}} :', text4, ()=> {State.switchToState(nextNode)}, true)
 }
 
@@ -33,5 +33,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Haku :', text1, finishText1,true);
+  DialogManager.showDialog('Haku :', text1, text1finish,true);
 }

@@ -12,7 +12,7 @@ const text2= "Désolée, petite. Je n'ai besoin de personne pour preparer mes su
   "Par contre, je sais que Yubaba cherche une jeune fille pour travailler dans les bains publiques.\n" +
   "Va la voir, elle te donnera ce que tu cherches!";
 
-function finishText1(){
+function text1finish(){
   DialogManager.showDialog('Kamaji :', text2, ()=> {State.switchToState(nextNode)}, true)
 }
 
@@ -21,5 +21,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
+  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
 }

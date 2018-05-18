@@ -12,7 +12,7 @@ const text2 = "C'est tard, ma puce. Tu devrais rentrer avec ton ami si tu ne veu
 
 
 
-function finishText1() {
+function text1finish() {
   DialogManager.showDialog('Zeniba :', text2, () => {State.switchToState(nextNode)},true)
 }
 
@@ -20,5 +20,5 @@ export default function () {
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, finishText1 , true);
+  DialogManager.showDialog('', text1, text1finish , true);
 }

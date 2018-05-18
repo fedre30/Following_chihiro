@@ -13,7 +13,7 @@ const text2= "J'ai entendu que tes parents se sont transformés en cochons. Tu v
 
 
 
-function finishText1(){
+function text1finish(){
 
     DialogManager.showDialog('Haku : ', text2, ()=> {State.switchToState(nextNode)},true )
 }
@@ -22,5 +22,5 @@ export default function () {
     SoundManager.clearSound();
     SoundManager.activeSound(song);
     BackgroundManager.setBackground(background);
-    DialogManager.showDialog('Haku : ', text1, finishText1,true);
+    DialogManager.showDialog('Haku : ', text1, text1finish,true);
 }

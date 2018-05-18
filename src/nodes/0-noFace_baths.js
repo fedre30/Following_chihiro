@@ -18,7 +18,7 @@ function selectedChoice2() {
   State.switchToState(refuseNode);
 }
 
-function text1Finish () {
+function text1finish () {
   DialogManager.showChoices([
     { text: 'Accepter', cb: selectedChoice1 },
     { text: 'Refuser', cb: selectedChoice2 },
@@ -29,5 +29,5 @@ export default function (){
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('', text1, text1Finish);
+  DialogManager.showDialog('', text1, text1finish);
 }

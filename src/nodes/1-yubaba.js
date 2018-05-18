@@ -1,6 +1,6 @@
 import background from '../assets/2-yubaba.png';
 import BackgroundManager from '../js/managers/background';
-import song from '../../public/assets/music/yubaba.mp3';
+import sound from '../../public/assets/music/yubaba.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
@@ -19,18 +19,23 @@ const text3 = "S'il vous plaît, madame. Je ne sais plus où se trouvent mes par
 const text4 = "Mmm.. Un esprit, hein? Bon, je vais te donner une chance, mais à la première erreur, je vais résilier le contrat.\n" +
   "En revanche, tu ne pourras pas utiliser ton prénom. Choisis le prénom qui te convient le plus";
 
-function finishText1() {
-  DialogManager.showDialog('Yubaba :', text2, finishText2,true)
+function text1finish() {
+  DialogManager.showDialog('Yubaba :', text2, text2finish,true)
 }
 
-function finishText2() {
-  DialogManager.showDialog('Chihiro :', text3, finishText3,true)
+function text2finish() {
+  DialogManager.showDialog('Chihiro :', text3, text3finish,true)
 }
 
-function finishText3() {
+function text3finish() {
   DialogManager.showDialog('Yubaba :', text4, () => {
     State.switchToState(nextNode)
   }, true)
+}
+
+function skip() {
+    VideoManager.clearVideo();
+    DialogManager.displayInfo('Chihiro :',text1,sound,background,text1finish);
 }
 
 
@@ -39,7 +44,6 @@ export default function () {
   SoundManager.clearSound();
   VideoManager.setVideo();
   VideoManager.showVideo(video);
-  SoundManager.activeSound(song);
-  BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, finishText1,true);
+  DialogManager.showDialog('', '', skip,true);
+
 }
