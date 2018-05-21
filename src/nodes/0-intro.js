@@ -1,7 +1,6 @@
 import background from '../assets/0-intro2.png';
 import BackgroundManager from '../js/managers/background';
 import sound from '../../public/assets/music/cejour.mp3';
-import SoundManager from '../js/managers/sound';
 import video from '../assets/spirited_away_intro.mov';
 import VideoManager from '../js/managers/video';
 import DialogManager from '../js/managers/dialog';
@@ -14,11 +13,11 @@ const text1 = 'Chihiro et ses parents arrivent dans le monde des esprits. Ses pa
     'sent que quelque chose de mal va se passer...';
 
 function selectedChoice1() {
-  State.switchToState(acceptNode);
+    State.switchToState(acceptNode);
 }
 
 function selectedChoice2() {
-  State.switchToState(refuseNode);
+    State.switchToState(refuseNode);
 
 }
 function skip() {
@@ -27,10 +26,10 @@ function skip() {
 }
 
 function text1finish () {
-  DialogManager.showChoices([
-    { text: 'Suivre ses parents', cb: selectedChoice1 },
-    { text: 'Ne pas suivre ses parents', cb: selectedChoice2 },
-  ]);
+    DialogManager.showChoices([
+        { text: 'Suivre ses parents', cb: selectedChoice1 },
+        { text: 'Ne pas suivre ses parents', cb: selectedChoice2 },
+    ]);
 }
 
 export default function (){

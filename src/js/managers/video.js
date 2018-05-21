@@ -25,7 +25,7 @@ class VideoManager{
     }
 
     showBgVideo(videoEl){
-        this.dialogEl.style.background = "rgba(77, 104, 135, 0.7)";
+        this.dialogEl.style.background = "rgba(77, 104, 135, 0.7)";zé
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.video.setAttribute('loop','true');

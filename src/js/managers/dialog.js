@@ -11,7 +11,7 @@ class DialogManager {
         this.choicesEl = document.querySelector(".choices");
         this.content = document.querySelector(".content");
         this.nameChoice = document.querySelector(".nameChoice");
-        this._name = "Chihiro";
+        this._name = "Sen";
     }
 
     hide() {
@@ -19,8 +19,7 @@ class DialogManager {
         this.clearChoices();
         this.clearText();
     }
-
-
+    
     showDialog(speaker, text, cb, withNextButton, animCb) {
         text = text.replace(new RegExp('{{name}}', 'gi'), this.name);
         speaker = speaker.replace(new RegExp('{{name}}', 'gi'), this.name);
