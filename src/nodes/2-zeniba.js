@@ -6,7 +6,7 @@ import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-riddle';
 import VideoManager from '../js/managers/video'
-import video from '../assets/train_withnoface.mov';
+import video from '../assets/train_withoutnoface .mov';
 
 const text1 = "{{name}} rend le sigille à Zeniba et passe un bon moment avec elle.";
 
