@@ -11,7 +11,7 @@ class DialogManager {
         this.choicesEl = document.querySelector(".choices");
         this.content = document.querySelector(".content");
         this.nameChoice = document.querySelector(".nameChoice");
-        this._name = "Chihiro";
+        this._name = "Sen";
     }
 
     hide() {
