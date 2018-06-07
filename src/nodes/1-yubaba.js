@@ -1,6 +1,6 @@
 import background from '../assets/2-yubaba.png';
 import BackgroundManager from '../js/managers/background';
-import sound from '../../public/assets/music/yubaba.mp3';
+import song from '../../public/assets/music/yubaba.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
@@ -35,15 +35,17 @@ function text3finish() {
 
 function skip() {
     VideoManager.clearVideo();
-    DialogManager.displayInfo('Chihiro :',text1,sound,background,text1finish);
+    DialogManager.displayInfo('Chihiro :',text1,song,background,text1finish);
 }
 
 
 export default function () {
   BackgroundManager.clearBackground();
-  SoundManager.clearSound();
   VideoManager.setVideo();
   VideoManager.showVideo(video);
+  SoundManager.clearSound();
+  SoundManager.activeSound(song);
+  BackgroundManager.setBackground(background);
   DialogManager.showDialog('', '', skip,true);
 
 }

@@ -1,4 +1,5 @@
-import background from '../assets/2-noFaceSaved.gif';
+import VideoManager from "../js/managers/video";
+import video from '../assets/fete.mov';
 import BackgroundManager from '../js/managers/background';
 import song from '../../public/assets/music/cheers.mp3';
 import SoundManager from '../js/managers/sound';
@@ -28,9 +29,11 @@ function text1finish(){
 }
 
 export default function () {
+    BackgroundManager.clearBackground();
     SoundManager.clearSound();
     SoundManager.activeSound(song);
-    BackgroundManager.setBackground(background);
+    VideoManager.setVideo();
+    VideoManager.showBgVideo(video);
     DialogManager.showDialog('', text1, text1finish);
 
 }

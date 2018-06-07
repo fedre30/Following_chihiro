@@ -5,6 +5,8 @@ import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
 import nextNode from '../nodes/2-name';
+import VideoManager from '../js/managers/video'
+import video from '../assets/yubaba.mov';
 
 const text1 = "Bonjour, Yubaba-san. Je suis venue pour vous demander un travail.";
 
@@ -27,11 +29,20 @@ function text3finish(){
   DialogManager.showDialog('Yubaba :', text4, ()=> {State.switchToState(nextNode)}, true)
 }
 
+function skip() {
+  VideoManager.clearVideo();
+  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
+}
+
 
 
 export default function () {
+  BackgroundManager.clearBackground();
+  VideoManager.setVideo();
+  VideoManager.showVideo(video);
   SoundManager.clearSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
-  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
+  DialogManager.showDialog('', '', skip,true);
+
 }

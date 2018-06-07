@@ -3,9 +3,11 @@ import sound from '../../public/assets/music/haku.mp3';
 import SoundManager from '../js/managers/sound';
 import DialogManager from '../js/managers/dialog';
 import State from '../js/managers/state';
-import video from '../assets/haku_human.mov';
 import nextNode from '../nodes/2-saveNoFace';
+import video from '../assets/haku_human.mov';
 import VideoManager from "../js/managers/video";
+
+
 
 const text1 = "Oh non! Haku est en danger! \n" +
     "Il a volé le sigille de Zeniba et a été attaqué par des oiseaux en papier.\n" +
