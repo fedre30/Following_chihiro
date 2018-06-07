@@ -31,18 +31,16 @@ function text3finish(){
 
 function skip() {
   VideoManager.clearVideo();
-  DialogManager.showDialog('Chihiro :', text1, text1finish,true);
+  DialogManager.displayInfo('Chihiro',text1,song,background,text1finish,true);
 }
 
 
 
 export default function () {
   BackgroundManager.clearBackground();
-  VideoManager.setVideo();
-  VideoManager.showVideo(video);
   SoundManager.clearSound();
-  SoundManager.activeSound(song);
-  BackgroundManager.setBackground(background);
+  VideoManager.setVideo();
+  VideoManager.showVideo(video,skip);
   DialogManager.showDialog('', '', skip,true);
 
 }

@@ -18,6 +18,7 @@ function selectedChoice1() {
 }
 
 function selectedChoice2() {
+    SoundManager.clearSound();
     State.switchToState(withoutSansVisage);
 }
 
@@ -31,6 +32,7 @@ function text1finish(){
 export default function () {
     BackgroundManager.clearBackground();
     SoundManager.clearSound();
+    SoundManager.setSound();
     SoundManager.activeSound(song);
     VideoManager.setVideo();
     VideoManager.showBgVideo(video);

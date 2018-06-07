@@ -23,7 +23,7 @@ function selectedChoice2() {
 }
 
 function text1finish() {
-  DialogManager.showDialog('Haku', text2, text2finish);
+  DialogManager.showDialog('', text2, text2finish);
 
 }
 function text2finish() {

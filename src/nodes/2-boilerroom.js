@@ -19,6 +19,7 @@ function text1finish(){
 
 export default function () {
   SoundManager.clearSound();
+  SoundManager.setSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Chihiro :', text1, text1finish,true);

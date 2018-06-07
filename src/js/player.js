@@ -1,32 +1,41 @@
 import volumeUp from '../assets/volume-up.svg';
 import volumeOff from '../assets/volume-muted.svg';
 
-const player = document.querySelector('#player');
-const volume = document.querySelector('.volume');
-const volumeImg = document.querySelector('.volume-img img');
-volumeImg.src = volumeUp;
+let player = {
+    init: function () {
+        this.player = document.querySelector('.player');
+        this.volume = document.querySelector('.volume');
+        this.volume.addEventListener('input', (ev) => {
+            this.setVolume(ev.target.value)
+        });
 
-function setVolume(value) {
-  setMuted(false);
-  player.volume = Math.max(Math.min(value, 1), 0);
-}
+        this.volumeImg = document.querySelector('.volume-img img');
+        this.volumeImg.src = volumeUp;
+        this.volumeImg.addEventListener('click', () => {
+            this.setMuted(!this.player.muted);
+        });
+    },
+    setVolume: function(value) {
+        console.log('unmute');
+        this.setMuted(false);
+        this.player.volume = Math.max(Math.min(value, 1), 0);
+    },
+    setMuted: function(isMuted) {
+        console.log('mute');
+        this.player.muted = isMuted;
+
+        if (this.player.muted) {
+            this.volume.value = 0;
+            this.volumeImg.src = volumeOff;
+        } else {
+            this.volume.value = player.volume;
+            this.volumeImg.src = volumeUp;
+        }
+    }
+};
+
+export default player;
 
 
-function setMuted(isMuted) {
-  player.muted = isMuted;
 
-  if (player.muted) {
-    volume.value = 0;
-    volumeImg.src = volumeOff;
-  } else {
-    volume.value = player.volume;
-    volumeImg.src = volumeUp;
-  }
-}
-
-volume.addEventListener('input', (ev) => setVolume(ev.target.value));
-
-volumeImg.addEventListener('click', function () {
-  setMuted(!player.muted);
-});
 

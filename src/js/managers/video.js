@@ -15,17 +15,17 @@ class VideoManager{
         this.video = video;
     }
 
-    showVideo(videoEl, loop = false){
+    showVideo(videoEl,cb){
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.video.appendChild(source);
-        this.video.onended = function () {
-        DialogManager.displayInfo();
+        this.video.onended = ()=> {
+            cb()
         };
     }
 
     showBgVideo(videoEl){
-        this.dialogEl.style.background = "rgba(77, 104, 135, 0.7)";zé
+        this.dialogEl.style.background = "rgba(77, 104, 135, 0.7)";
         const source = document.createElement('source');
         source.setAttribute('src',videoEl);
         this.video.setAttribute('loop','true');

@@ -14,6 +14,8 @@ const text1 = "Un gros esprit putride arrive et demande de se faire laver. Grâc
 
 export default function () {
   BackgroundManager.clearBackground();
+  SoundManager.clearSound();
+  SoundManager.setSound();
   SoundManager.activeSound(sound);
   VideoManager.setVideo();
   VideoManager.showBgVideo(video);

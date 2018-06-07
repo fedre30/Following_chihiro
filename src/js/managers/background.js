@@ -1,16 +1,16 @@
 class BackgroundManager{
-  constructor(){
-    this.content = document.querySelector('.mainContent');
-  }
+    constructor(){
+        this.content = document.querySelector('.mainContent');
+    }
 
-  setBackground(url){
-    this.content.style.backgroundImage = `url(${url})`;
-    this.content.style.backgroundSize = 'cover';
-  }
+    setBackground(url){
+        this.content.style.backgroundImage = `url(${url})`;
+        this.content.style.backgroundSize = 'cover';
+    }
 
-  clearBackground(){
-    this.content.style.backgroundImage = '';
-  }
+    clearBackground(){
+        this.content.style.backgroundImage = '';
+    }
 }
 
 const instance = new BackgroundManager();

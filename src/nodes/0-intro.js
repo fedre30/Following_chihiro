@@ -20,6 +20,7 @@ function selectedChoice2() {
     State.switchToState(refuseNode);
 
 }
+
 function skip() {
     VideoManager.clearVideo();
     DialogManager.displayInfo('',text1,sound,background,text1finish);
@@ -35,6 +36,6 @@ function text1finish () {
 export default function (){
     BackgroundManager.clearBackground();
     VideoManager.setVideo();
-    VideoManager.showVideo(video);
+    VideoManager.showVideo(video,skip);
     DialogManager.showDialog('', '', skip,true);
 }

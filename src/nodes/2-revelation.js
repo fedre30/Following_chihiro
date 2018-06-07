@@ -31,6 +31,7 @@ function text3finish(){
 
 export default function () {
   SoundManager.clearSound();
+  SoundManager.setSound();
   SoundManager.activeSound(song);
   BackgroundManager.setBackground(background);
   DialogManager.showDialog('Haku :', text1, text1finish,true);

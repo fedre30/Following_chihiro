@@ -19,7 +19,8 @@ class DialogManager {
         this.clearChoices();
         this.clearText();
     }
-    
+
+
     showDialog(speaker, text, cb, withNextButton, animCb) {
         text = text.replace(new RegExp('{{name}}', 'gi'), this.name);
         speaker = speaker.replace(new RegExp('{{name}}', 'gi'), this.name);
@@ -44,7 +45,7 @@ class DialogManager {
             this.textEl.innerText = text.substring(0,index);
             index++;
 
-            setTimeout(animateText, 2 + Math.random() * 4);
+            setTimeout(animateText, 20 + Math.random() * 40);
         };
 
         setTimeout(animateText, 50);
@@ -76,10 +77,13 @@ class DialogManager {
         this.textEl.innerText = '';
     }
     displayInfo(speaker,text,sound,background,cb,withNextButton) {
+
         VideoManager.clearVideo();
+        SoundManager.clearSound();
+        SoundManager.setSound();
         SoundManager.activeSound(sound);
         BackgroundManager.setBackground(background);
-        this.showDialog(speaker, text, cb,withNextButton);
+        this.showDialog(speaker, text, cb, withNextButton);
     }
 
     displayInput(){
